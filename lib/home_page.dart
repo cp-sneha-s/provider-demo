@@ -1,7 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:providerDemo/user_data_provider.dart';
 import 'package:providerDemo/user_list_screen.dart';
 
 
@@ -15,7 +12,6 @@ class HomePage extends StatelessWidget {
     return Scaffold(appBar: AppBar(title:const Text('Provider demo'),),
         body: TextButton(
           onPressed: () {
-            Provider.of<UserDataProvider>(context,listen: false).getData();
             Navigator.push(
                 context, MaterialPageRoute(builder: (_) => UserListScreen()));
           },
